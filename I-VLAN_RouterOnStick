@@ -1,0 +1,24 @@
+Creat VLAN and assign pc's to VLAN:
+
+On the switch:
+enable
+configure terminal
+
+interface fastEthernet 0/24 (port connected to router and switch)
+switchport mode trunk
+end
+
+
+On the router:
+enable
+configure terminal
+
+interface gigabitEthernet 0/0.10
+encapsulation dot1Q 10
+ip address 192.168.10.1 255.255.255.0
+exit
+
+interface gigabitEthernet 0/0.20
+encapsulation dot1Q 20
+ip address 192.168.20.1 255.255.255.0
+end
