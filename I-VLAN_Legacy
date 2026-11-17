@@ -1,0 +1,13 @@
+On the switch:
+enable
+configure terminal
+
+interface fastEthernet 0/23 (router-firstwire-connected-to-which-port-of-switch-number-instead-of-23)
+switchport mode access
+switchport access vlan 10
+exit
+
+interface fastEthernet 0/24 (router-second-wire-connected-to-which-port-of-switch-number-instead-of-24)
+switchport mode access
+switchport access vlan 20
+end
